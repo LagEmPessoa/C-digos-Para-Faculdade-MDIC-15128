@@ -1,0 +1,18 @@
+package MDIC15128;
+import java.util.Scanner;
+public class CinquentaValores {
+    public static void main(String[] args){
+        int A,soma=0,cont =0;
+        for (int i = 0;i<50;i++){
+            Scanner leia = new Scanner(System.in);
+            System.out.println("Digite um numero inteiro: ");
+            A = leia.nextInt();
+            if (A>0){
+                soma +=A;
+            }else{
+                cont++;
+            }
+        }
+    System.out.println("A soma dos numeros positivos é: "+soma+" E a quantidade de valores negativos é: "+cont);
+    }
+}
