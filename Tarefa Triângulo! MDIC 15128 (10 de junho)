@@ -1,14 +1,14 @@
 import java.util.Scanner;
 public class MyClass {
     public static void main(String args[]) {
-        int A,B,C;
+        float A,B,C;
         Scanner leia = new Scanner (System.in);
         System.out.println("Qual o valor do primeiro lado? ");
-        A = leia.nextInt();
+        A = leia.nextFloat();
         System.out.println("Qual o valor do segundo lado? ");
-        B = leia.nextInt();
+        B = leia.nextFloat();
         System.out.println("Qual o valor do terceiro lado? ");
-        C = leia.nextInt();
+        C = leia.nextFloat();
         if ((A < B + C) && (B < A + C) && (C < B + A)){
             System.out.println("Os valores informados formam um triângulo!");
             if (A == B && B == C){
@@ -19,7 +19,7 @@ public class MyClass {
                 System.out.print("Um triângulo do tipo Escaleno!");
             }
         }else{
-            System.out.println("Os valores informados NÃO formam um triãngulo! Tente novamente! ");
+            System.out.println("Os valores informados NÃO formam um triângulo! Tente novamente! ");
         }
     }
 }
