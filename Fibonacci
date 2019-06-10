@@ -1,0 +1,13 @@
+package MDIC15128;
+public class Fibonacci {
+    public static void main(String[] args){
+        int prox = 0,atual = 0,ant = 1;
+    while(prox<=100){
+        System.out.println(prox);
+        prox = atual + ant;
+        ant = atual;
+        atual = prox;
+        
+        }
+    }
+}
