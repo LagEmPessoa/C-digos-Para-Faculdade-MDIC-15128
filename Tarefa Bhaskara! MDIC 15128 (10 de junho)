@@ -1,1 +1,36 @@
-
+import java.util.Scanner;
+public class MyClass {
+    public static void main(String args[]) {
+        double A,B,C,delta,x1,x2;
+        int n = 0,i = 1;
+        Scanner leia = new Scanner (System.in);
+        System.out.println("Digite o primeiro (A) valor: ");
+        A = leia.nextDouble();
+        if (A == 0){
+            System.out.println("A equação não é do segundo grau!");
+        }else{
+            System.out.println("Digite o segundo (B) valor: ");
+            B = leia.nextDouble();
+            System.out.println("Digite o terceiro (C) valor: ");
+            C = leia.nextDouble();
+            delta = ((B*B) - 4*A*C);
+            while (delta >= i){
+            delta -= i;
+            i += 2;
+            n++;
+            }
+            if (delta < 0){
+                System.out.println("A equação não possui raízes reais!");
+            }else if (delta == 0){
+                x1 = ((-B) + n) / (2*A);
+                System.out.println("A equação só possui uma raiz: "+x1);
+            }else{
+                x1 = ((-B) + n) / (2*A);
+                x2 = ((-B) - n) / (2*A);
+                System.out.println("As raízes da equação são: "+x1+" e "+x2);
+            }
+                
+        }
+        
+    }
+}
