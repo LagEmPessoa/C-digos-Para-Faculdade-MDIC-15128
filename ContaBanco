@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class ContaBancDemo {
+  public static void main(String[] args) {
+  ContaBanc Bradesco = new ContaBanc();
+  Scanner leia = new Scanner(System.in); 
+  System.out.println("Qual seu nome? ");
+  Bradesco.Cliente = leia.nextLine(); 
+  Bradesco.NdaConta = "4002.8922.FUNKDOYUDI";
+  Bradesco.agencia = "20-100";
+  Bradesco.cpf = "600.881.780-67";
+  System.out.println("De quanto é seu saldo? ");
+  double x = leia.nextDouble();
+  Bradesco.setSaldo(x);
+  System.out.println("Para retirar aperte: 1 ! Para depositar digite:  2 !");
+  int opção = leia.nextInt();
+  if (opção == 1){
+      System.out.println("Quanto você quer retirar? ");
+      double saque = leia.nextDouble();
+      Bradesco.debitar(saque);
+      System.out.println("O valor do seu saldo atual é: "+Bradesco.getSaldo());
+  }else if(opção == 2){
+      System.out.println("Quanto voce quer depositar?");
+      double depósito = leia.nextDouble();
+      Bradesco.creditar(depósito);
+      System.out.println("O valor do seu saldo atual é: "+Bradesco.getSaldo());
+  }else{
+       System.out.println("NÚMERO INVÁLIDO! TENTE NOVAMENTE");
+  }
+   
+
+   
+}
+}
