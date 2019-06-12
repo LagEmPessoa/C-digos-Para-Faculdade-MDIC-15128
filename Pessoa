@@ -1,0 +1,20 @@
+package ei;
+public class Pessoa {
+    public String nome,corDaCamisa,corDoCabelo,cpf,telefone;
+    public double nota1,nota2;
+    
+    public Pessoa(String nome,String cpf,String telefone,String corDaCamisa,String corDoCabelo ){
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.corDaCamisa = corDaCamisa;
+        this.corDoCabelo = corDoCabelo;
+    }
+    public Pessoa(String nome){
+        this.nome = nome;
+    }
+    public Pessoa(double nota1,double nota2){
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+    }
+}
