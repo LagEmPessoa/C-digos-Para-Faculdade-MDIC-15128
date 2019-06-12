@@ -1,0 +1,31 @@
+package ei;
+import java.util.Scanner;
+public class ProdutoDEMO {
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        Produto Veja = new Produto();
+        System.out.println("Qual foi o custo do produto? ");
+        double x = leia.nextDouble();
+        Veja.setprecoCusto(x);
+        System.out.println("Qual foi o preço de venda do produto? ");
+        double y = leia.nextDouble();
+        Veja.setprecoVenda(y);
+        boolean bol = true;
+        while (bol == true){
+            if (Veja.getprecoVenda() <= Veja.getprecoCusto()){
+            System.out.println("O preço de venda foi inferior ao preço de compra! Tente novamente!");    
+            System.out.println("Qual foi o preço de venda do produto? ");
+            y = leia.nextDouble();
+            Veja.setprecoVenda(y);
+            }else{
+                bol = false;
+            }
+        }
+        System.out.print("A margem de lucro é igual a: ");
+        Veja.calcularMargemLucro();
+        System.out.println(Veja.calcularMargemLucro());
+        System.out.println("A porcentagem da margem de lucro foi de: ");
+        Veja.getMargemLucroPorcentagem();
+        System.out.println(Veja.getMargemLucroPorcentagem()+"%");
+    }
+}
