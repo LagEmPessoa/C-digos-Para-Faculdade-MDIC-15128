@@ -1,0 +1,128 @@
+//AntecessorSucessor
+package atividades1706;
+import java.util.Scanner;
+public class AntecessorSucessor {
+    public static void main(String[] args) {
+       int x,xa,xs;
+       Scanner leia = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        x = leia.nextInt();
+        
+        xa = x - 1;
+        xs = x + 1;
+        System.out.println("O sucessor de "+x+" é "+xs+" e o antecessor é "+xa);
+       
+    }
+    
+}
+//Idade
+package atividades1706;
+import java.util.Scanner;
+/**
+ *
+ * @author Lucas
+ */
+public class idade {
+    public static void main(String[] args) {
+        int ano,mes,dia,diaT,i=0;
+        Scanner leia = new Scanner(System.in);
+        
+        System.out.println("Qual a sua idade,em anos? ");
+        ano = leia.nextInt();
+        System.out.println("Qual a sua idade,considerando o mês? ");
+        mes = leia.nextInt();
+        System.out.println("Qual a sua idade,considerando os dias? ");
+        dia = leia.nextInt();
+            while ((((dia<0)||(mes<0)||(ano<0)) && (i==0))){
+                System.out.println("Valor inválido!");
+                System.out.println("Qual a sua idade,em anos? ");
+                ano = leia.nextInt();
+                System.out.println("Qual a sua idade,considerando o mês? ");
+                mes = leia.nextInt();
+                System.out.println("Qual a sua idade,considerando os dias? ");
+                dia = leia.nextInt();
+                if ((dia>0)&&(mes>0)&&(ano>0)){
+                    i++;
+                }
+                }
+        diaT = (365*ano)+(30*mes)+(dia);
+        System.out.println(ano+" anos, "+mes+" meses e "+dia+" dias = "+diaT+" dias.");
+    }
+}
+//IPI
+package atividades1706;
+import java.util.Scanner;
+/**
+ *
+ * @author Lucas
+ */
+public class IPI {
+    public static void main(String[] args) {
+        String cp1,cp2;
+        double vp1,vp2,valorTotal;
+        int IPI,qp1,qp2;
+        Scanner leia = new Scanner(System.in);
+        
+        System.out.println("Qual o valor do IPI (Imposto Sobre Produto Industrializado), em porcentagem: ");
+        IPI = leia.nextInt();
+        System.out.println("Qual o valor do primeiro produto: ");
+        vp1 = leia.nextDouble();
+        System.out.println("Qual o valor do segundo produto: ");
+        vp2 = leia.nextDouble();
+        System.out.println("Qual a quantidade de peças do primeiro produto: ");
+        qp1 = leia.nextInt();
+        System.out.println("Qual a quantidade de peças do segundo produto: ");
+        qp2 = leia.nextInt();
+        valorTotal = (vp1*qp1 + vp2*qp2)*(IPI/100 + 1);
+        System.out.println("O valor total foi: "+valorTotal);
+    }
+}
+//MédiaDasMédias
+package atividades1706;
+/**
+ *
+ * @author Lucas
+ */
+public class MestroDosMagos {
+    public static void main(String[] args) {
+        double media987 = (8+9+7)/3,media456 = (4+5+6)/3, mediaS = media987 + media456 , mediaM = mediaS/2;
+        System.out.println("A média aritmética dos números 8,9 e 7: "+media987+" A média dos números 4, 5 e 6: "+media456+" A soma das médias é: "+mediaS+" A média das médias é: "+mediaM);
+    }
+}
+//Reajuste
+package atividades1706;
+import java.util.Scanner;
+/**
+ *
+ * @author Lucas <your.name at your.org>
+ */
+public class Reajuste {
+    public static void main(String[] args) {
+        double saldo,nsaldo;
+        Scanner leia = new Scanner(System.in);
+        
+        System.out.println("Qual o valor do saldo? ");
+        saldo = leia.nextInt();
+        nsaldo = saldo * 1.15;
+        System.out.println("O saldo com reajuste de 15% foi: R$ "+nsaldo);
+    }
+}
+//Salários
+package atividades1706;
+import java.util.Scanner;
+/**
+ *
+ * @author Lucas
+ */
+public class Salarios {
+    public static void main(String[] args) {
+        double salm = 788.00,salu,nsalm;
+        
+        Scanner leia = new Scanner(System.in);
+        System.out.println("Qual o valor do seu salário? ");
+        salu = leia.nextInt();
+        nsalm = salu / salm;
+        System.out.printf("Você ganha: %.2f",nsalm);
+        System.out.printf(" salários mínimos!\n");
+    }
+}
