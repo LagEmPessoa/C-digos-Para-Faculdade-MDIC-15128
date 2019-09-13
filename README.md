@@ -1,2 +1,2 @@
-# C-digos-Para-Faculdade-MDIC-15128
+# C-digos-Para-Faculdade
 Just college things! Don't mind me!
