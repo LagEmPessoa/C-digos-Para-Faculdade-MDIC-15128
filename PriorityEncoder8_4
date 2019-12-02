@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity cod8_4 is
+    port(
+	y0,y1,y2,y3,y4,y5,y6,y7 : in std_logic;
+	c,b,a : out std_logic
+	);
+end entity;
+
+architecture golfinho of cod8_4 is
+signal z : std_logic_vector(2 downto 0);
+begin
+z <= c & b & a ;
+process(y0,y1,y2,y3,y4,y5,y6,y7)
+begin
+	if y7 = '1' then
+	    z <= "111";
+	elsif y6 = '1' then 
+	    z <= "110";
+	elsif y5 = '1' then
+	    z <= "101";
+	elsif y4 = '1' then
+	    z <= "100";
+	elsif y3 = '1' then
+	    z <= "011";
+	elsif y2 = '1' then
+	    z <= "010";
+	elsif y1 = '1' then
+	    z <= "001";
+	else
+	    z <= "000";
+end if;
+end process;
+end golfinho;
