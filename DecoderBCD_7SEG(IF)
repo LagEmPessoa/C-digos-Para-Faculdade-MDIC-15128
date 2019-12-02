@@ -1,0 +1,44 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+
+entity gaivota is
+	port(
+		y0,y1,y2,y3 : IN std_logic;
+	a,b,c,d,e,f,g,anodo_comum   : OUT std_logic
+	);
+end gaivota;
+
+architecture peixeboi of gaivota is
+signal m : std_logic_vector(3 downto 0);
+signal z : std_logic_vector(7 downto 0);
+begin
+m <= y0 & y1 & y2 & y3;
+z <= anodo_comum & g & f & e & d & c & b & a;
+process(m)
+begin
+	if m = "0000" then 
+		z <= "11000000";
+	elsif m = "0001" then 
+		z <= "11111001";
+	elsif m = "0010" then
+		z <= "10100100";
+	elsif m = "0011" then
+		z <= "10110000";
+	elsif m = "0100" then
+		z <= "10011001";
+	elsif m = "0101" then
+		z <= "10010010";
+	elsif m = "0110" then
+		z <= "10000010";
+	elsif m = "0111" then
+		z <= "11111000";
+	elsif m = "1000" then
+		z <= "10000000";
+	elsif m = "1001" then
+		z <= "10010000";
+	else
+		z <= "11111111";
+end if;
+end process;
+end architecture peixeboi;
+		
