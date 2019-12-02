@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity cod8_4Case is
+    port(
+	y0,y1,y2,y3,y4,y5,y6,y7 : in std_logic;
+	c,b,a : out std_logic
+	);
+end entity;
+
+architecture molusco of cod8_4 is
+signal z : std_logic_vector(2 downto 0);
+signal m : std_logic_vector(7 downto 0);
+begin
+z <= c & b & a ;
+m <= y7 & y6 & y5 & y4 & y3 & y2 & y1 & y0;
+process(m)
+begin
+	case m is
+		when "00000001" => z <= "000";
+		when "0000001X" => z <= "001";
+		when "000001XX" => z <= "010";
+		when "00001XXX" => z <= "011";
+		when "0001XXXX" => z <= "100";
+		when "001XXXXX" => z <= "101";
+		when "01XXXXXX" => z <= "110";
+		when others     => z <= "111";
+
+	end case;
+end process;
+end molusco;
